@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+     <Operation Class="PatchOperationSequence">
+     <success>Always</success>
+	<operations> 
+           <li Class="PatchOperationTest">
+             <xpath>*/ThingDef[defName = "Sandbags"]/costList</xpath>
+           </li>
+	   <li Class="PatchOperationRemove">
+	      <xpath>*/ThingDef[defName = "Sandbags"]/costList</xpath>
+	   </li> 
+           <li Class="PatchOperationAdd">
+	      <xpath>*/ThingDef[defName = "Sandbags"]</xpath>
+	      <value>
+	<stuffCategories>
+		<li>Metallic</li>
+		<li>Stony</li>
+        </stuffCategories>
+	      </value>
+	    </li> 
+            <li Class="PatchOperationAdd">
+	      <xpath>*/ThingDef[defName = "Sandbags"]</xpath>
+	      <value>
+	         <costStuffCount>6</costStuffCount>
+	      </value>
+	    </li> 
+        </operations> 
+     </Operation> 
+</Patch>
